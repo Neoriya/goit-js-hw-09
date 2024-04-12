@@ -1,2 +1,2 @@
-import"./assets/styles-3e56bb03.js";console.log("Form");
+import"./assets/styles-3e56bb03.js";const r="feedback-form-state",n=document.querySelector(".feedback-form"),a=n.querySelector("input"),s=n.querySelector("textarea");n.addEventListener("submit",c);a.addEventListener("input",u);s.addEventListener("input",u);l();function c(e){e.preventDefault();const t=a.value.trim(),o=s.value.trim();if(t===""||o===""){alert("Будь ласка, заповніть всі дані");return}console.log([{email:t},{message:o}]),e.currentTarget.reset(),localStorage.removeItem(r)}function u(){const e=a.value.trim()+"*"+s.value.trim();localStorage.setItem(r,e)}function l(){const e=localStorage.getItem(r);if(e){const t=e.split("*");a.value=t[0],s.value=t[1]}}
 //# sourceMappingURL=commonHelpers2.js.map
